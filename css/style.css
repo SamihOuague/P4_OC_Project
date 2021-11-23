@@ -4,20 +4,33 @@ body {
   font-family: Roboto;
 }
 
+.p-32 {
+  padding-top: 32px;
+}
+
+.border {
+  box-shadow: 0px 0px 3px 3px #e0e0e0;
+  margin-bottom: 3px;
+}
+
 .header {
   display: flex;
   flex-direction: column;
+  z-index: -999;
+  max-height: 480px;
 }
 .header__head {
-  box-shadow: 0px 0px 3px 3px #e0e0e0;
-  margin-bottom: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.header__head a {
+  text-decoration: none;
+}
 .header__head--title {
   font-family: Shrikhand;
   cursor: pointer;
+  color: black;
 }
 .header__info {
   background: #F0F0F0;
@@ -38,16 +51,24 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 32px 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  max-height: 500px;
+}
+.header__intro--img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 .header__intro--title {
   margin: 0;
-  font-size: 32px;
+  font-size: 24px;
   color: #2d3436;
 }
 .header__intro--subtitle {
   margin: 8px 0;
-  font-size: 24px;
+  font-size: 16px;
   color: #636e72;
 }
 .header__intro--button {
@@ -55,9 +76,9 @@ body {
   padding: 16px 24px;
   border-radius: 50px;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 12px;
   background: linear-gradient(#FF79DA, #9356DC);
-  color: #dfe6e9;
+  color: white;
   margin: 32px 0;
   cursor: pointer;
   box-shadow: 3px 3px 5px #b4b4b4;
@@ -88,18 +109,105 @@ body {
   text-align: center;
 }
 
+.menu {
+  background: #F9F9F9;
+  z-index: 999;
+  top: -56px;
+  position: relative;
+  border-radius: 48px 48px 0 0;
+  margin-bottom: -56px;
+  padding: 24px;
+}
+.menu__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__heading--title {
+  font-family: Shrikhand;
+}
+.menu__heading--icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #F2F2F2;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.menu__heading--icon i {
+  transition-property: background, background-clip, -webkit-text-fill-color;
+  transition-duration: 400ms;
+}
+.menu__heading--icon:hover i {
+  -webkit-text-stroke-width: 0px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__container--button {
+  border: none;
+  padding: 16px 24px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 12px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  margin: 32px 0;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px #b4b4b4;
+  font-size: 16px;
+}
+.menu__container__elt__content__value {
+  margin: 16px 0;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 5px 5px 5px #F2F2F2, -5px 5px 5px #F2F2F2, 3px -3px 3px #F2F2F2;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0px 8px;
+  cursor: pointer;
+}
+.menu__container__elt__content__value--title, .menu__container__elt__content__value--info, .menu__container__elt__content__value--price {
+  margin: 8px 0;
+}
+.menu__container__elt__content__value--price {
+  font-weight: 600;
+}
+.menu__container__elt__content__value--info {
+  font-size: 14px;
+  font-weight: 300;
+}
+.menu__container__elt__content__value div {
+  min-height: 64px;
+}
+.menu__container__elt__content__value div + div {
+  display: flex;
+  align-items: flex-end;
+}
+.menu__container__elt--name {
+  font-weight: 400;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 5px;
+  width: 50px;
+}
+
+.d-center {
+  display: flex;
+  justify-content: center;
+}
+
 .work {
   padding: 0 24px;
 }
 .work--title {
-  font-size: 32px;
+  font-size: 24px;
   color: #2d3436;
 }
 .work__container__elt {
   margin: 32px 0;
   background: #F9F9F9;
   border-radius: 16px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -114,7 +222,7 @@ body {
   width: 96px;
   text-align: center;
   color: #636e72;
-  font-size: 24px;
+  font-size: 18px;
   transition-property: color;
   transition-duration: 400ms;
 }
@@ -130,7 +238,7 @@ body {
   padding: 16px;
 }
 .store--title {
-  font-size: 32px;
+  font-size: 24px;
 }
 .store__container {
   display: flex;
@@ -161,16 +269,16 @@ body {
   margin: 6px 0;
 }
 .store__container__elt__info--name h4 {
-  font-size: 18px;
+  font-size: 16px;
 }
 .store__container__elt__info--name p {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 300;
 }
 .store__container__elt__info--icon {
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
-  color: white;
+  color: #FFFFFF;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }

@@ -1,0 +1,12 @@
+@mixin custom-button {
+    border: none;
+    padding: 16px 24px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 12px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    margin: 32px 0;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #b4b4b4;
+}

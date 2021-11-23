@@ -1,0 +1,69 @@
+.menu {
+    background: #F9F9F9;
+    z-index: 999;
+    top: -56px;
+    position: relative;
+    border-radius: 48px 48px 0 0;
+    margin-bottom: -56px;
+    padding: 24px;
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--title {
+            font-family: Shrikhand;
+        }
+        &--icon {
+            @include icon;
+        }
+    }
+    &__container {
+        &--button {
+            @include custom-button;
+            font-size: 16px;
+        }
+        &__elt {
+            &__content {
+                &__value {
+                    margin: 16px 0;
+                    border-radius: 16px;
+                    background: white;
+                    box-shadow: 5px 5px 5px #F2F2F2, -5px 5px 5px#F2F2F2, 3px -3px 3px#F2F2F2;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    padding: 0px 8px;
+                    cursor: pointer;
+                    &--title, &--info, &--price {
+                        margin: 8px 0;
+                    }
+                    &--price {
+                        font-weight: 600;
+                    }
+                    &--info {
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                    div {
+                        min-height: 64px;
+                    }
+                    div + div {
+                        display: flex;
+                        align-items: flex-end;
+                    }
+                }
+            }
+            &--name {
+                font-weight: 400;
+                border-bottom: 3px solid #99E2D0;
+                padding-bottom: 5px;
+                width: 50px;
+            }
+        }
+    }
+}
+
+.d-center {
+    display: flex;
+    justify-content: center;
+}

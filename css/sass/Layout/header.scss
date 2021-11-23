@@ -3,18 +3,29 @@ body {
     margin: 0;
     font-family: Roboto;
 }
+.p-32 {
+    padding-top: 32px;
+}
+.border {
+    box-shadow: 0px 0px 3px 3px #e0e0e0;
+    margin-bottom: 3px;
+}
 .header {
     display: flex;
     flex-direction: column;
+    z-index: -999;
+    max-height: 480px;
     &__head {
-        box-shadow: 0px 0px 3px 3px #e0e0e0;
-        margin-bottom: 3px;
         display: flex;
         align-items: center;
         justify-content: center;
+        a {
+            text-decoration: none;
+        }
         &--title {
             font-family: Shrikhand;
             cursor: pointer;
+            color: black;
         }
     }
     &__info {
@@ -36,28 +47,27 @@ body {
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 32px 0;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        max-height: 500px;
+        &--img {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
         &--title {
             margin: 0;
-            font-size: 32px;
+            font-size: 24px;
             color: #2d3436;
         }
         &--subtitle {
             margin: 8px 0;
-            font-size: 24px;
+            font-size: 16px;
             color: #636e72;
         }
         &--button {
-            border: none;
-            padding: 16px 24px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 16px;
-            background: linear-gradient(#FF79DA, #9356DC);
-            color: #dfe6e9;
-            margin: 32px 0;
-            cursor: pointer;
-            box-shadow: 3px 3px 5px #b4b4b4;
+            @include custom-button();
         }
     }
 }
