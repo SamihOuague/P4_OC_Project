@@ -17,6 +17,7 @@ body {
 }
 .header__head--title {
   font-family: Shrikhand;
+  cursor: pointer;
 }
 .header__info {
   background: #F0F0F0;
@@ -62,6 +63,31 @@ body {
   box-shadow: 3px 3px 5px #b4b4b4;
 }
 
+.footer {
+  background-color: #2d3436;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.footer--title {
+  font-family: Shrikhand;
+  font-size: 24px;
+  margin: 0;
+}
+.footer__nav {
+  list-style-type: none;
+  padding: 0;
+}
+.footer__nav--link {
+  margin: 8px 0;
+  cursor: pointer;
+}
+.footer__nav--link .fas {
+  width: 24px;
+  text-align: center;
+}
+
 .work {
   padding: 0 24px;
 }
@@ -97,6 +123,75 @@ body {
 }
 .work__container__elt:hover .work__container__elt--icon {
   color: #9356DC;
+}
+
+.store {
+  background: #F9F9F9;
+  padding: 16px;
+}
+.store--title {
+  font-size: 32px;
+}
+.store__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.store__container__elt {
+  margin: 16px 24px;
+  max-height: 320px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px 5px #F1F1F1;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.store__container__elt__info {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.store__container__elt__info--name {
+  text-decoration: none;
+  color: black;
+}
+.store__container__elt__info--name h4, .store__container__elt__info--name p {
+  margin: 6px 0;
+}
+.store__container__elt__info--name h4 {
+  font-size: 18px;
+}
+.store__container__elt__info--name p {
+  font-size: 16px;
+  font-weight: 300;
+}
+.store__container__elt__info--icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.store__container__elt__info--icon i {
+  transition-property: background, background-clip, -webkit-text-fill-color;
+  transition-duration: 400ms;
+}
+.store__container__elt__info--icon:hover i {
+  -webkit-text-stroke-width: 0px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.store__container__elt__img {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.store__container__elt__img--img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

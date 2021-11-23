@@ -1,0 +1,68 @@
+.store {
+    background: #F9F9F9;
+    padding: 16px;
+    &--title {
+        font-size: 32px;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__elt {
+            margin: 16px 24px;
+            max-height: 320px;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 5px 5px 5px 5px #F1F1F1;
+            border-radius: 25px;
+            overflow: hidden;
+            &__info {
+                padding: 8px 16px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &--name {
+                    text-decoration: none;
+                    color: black;
+                    h4, p {
+                        margin: 6px 0;
+                    }
+                    h4 {
+                        font-size: 18px;
+                    }
+                    p {
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+                &--icon {
+                    font-size: 24px;
+                    cursor: pointer;
+                    color: white;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: black;
+                    i {
+                        transition-property: background, background-clip, -webkit-text-fill-color;
+                        transition-duration: 400ms;
+                    }
+                    &:hover i {
+                        -webkit-text-stroke-width: 0px;
+                        background: linear-gradient( #9356DC,#FF79DA);
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+            &__img {
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                &--img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

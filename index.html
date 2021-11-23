@@ -1,56 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>OhMyFood!</title>
-</head>
-<body>
-    <header class="header">
-        <div class="header__head">
-            <h1 class="header__head--title">ohmyfood</h1>
-        </div>
-        <div class="header__info">
-            <p class="header__info--address">
-                <span class="header__info--icone">
-                    <i class="fas fa-map-marker-alt"></i>
-                </span>Paris, Belleville</p>
-        </div>
-        <div class="header__intro">
-            <h2 class="header__intro--title">Reserver le menu qui<br/> vous convient</h2>
-            <p class="header__intro--subtitle">Decouvrez des restaurant d'exception,<br/>selectionner par nos soins.</p>
-            <button class="header__intro--button">Explorer nos restaurants</button>
-        </div>
-    </header>
-    <section class="work">
-        <h3 class="work--title">Fonctionnement</h3>
-        <div class="work__container">
-            <div class="work__container__elt">
-                <span class="work__container__elt--icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </span>
-                <p class="work__container__elt--name">Choisissez votre menu</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>OhMyFood!</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__head">
+                <h1 class="header__head--title">ohmyfood</h1>
             </div>
-            <div class="work__container__elt">
-                <span class="work__container__elt--icon">
-                    <i class="fas fa-list-ul"></i>
-                </span>
-                <p class="work__container__elt--name">Composez votre menu</p>
+            <div class="header__info">
+                <p class="header__info--address">
+                    <span class="header__info--icone">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>Paris, Belleville</p>
             </div>
-            <div class="work__container__elt">
-                <span class="work__container__elt--icon">
-                    <i class="fas fa-store"></i>
-                </span>
-                <p class="work__container__elt--name">Degustez au restaurant</p>
+            <div class="header__intro">
+                <h2 class="header__intro--title">Reserver le menu qui<br/> vous convient</h2>
+                <p class="header__intro--subtitle">Decouvrez des restaurant d'exception,<br/>selectionner par nos soins.</p>
+                <button class="header__intro--button">Explorer nos restaurants</button>
             </div>
-        </div>
-    </section>
-</body>
+        </header>
+        <section class="work">
+            <h3 class="work--title">Fonctionnement</h3>
+            <div class="work__container">
+                <div class="work__container__elt">
+                    <span class="work__container__elt--icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </span>
+                    <p class="work__container__elt--name">Choisissez votre menu</p>
+                </div>
+                <div class="work__container__elt">
+                    <span class="work__container__elt--icon">
+                        <i class="fas fa-list-ul"></i>
+                    </span>
+                    <p class="work__container__elt--name">Composez votre menu</p>
+                </div>
+                <div class="work__container__elt">
+                    <span class="work__container__elt--icon">
+                        <i class="fas fa-store"></i>
+                    </span>
+                    <p class="work__container__elt--name">Degustez au restaurant</p>
+                </div>
+            </div>
+        </section>
+        <section class="store">
+            <h3 class="store--title">Restaurants</h3>
+            <div class="store__container">
+                <div class="store__container__elt">
+                    <a href="pallette-du-gout.html" class="store__container__elt__img">
+                        <img class="store__container__elt__img--img" alt="Restaurant picture" src="./images/jay-wennington.jpg"/>
+                    </a>
+                    <div class="store__container__elt__info">
+                        <a href="pallette-du-gout.html" class="store__container__elt__info--name">
+                            <h4>La palette du gout</h4>
+                            <p>Menilmontant</p>
+                        </a>
+                        <div class="store__container__elt__info--icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="store__container__elt">
+                    <a href="pallette-du-gout.html" class="store__container__elt__img">
+                        <img class="store__container__elt__img--img" alt="Restaurant picture" src="./images/stil.jpg"/>
+                    </a>
+                    <div class="store__container__elt__info">
+                        <a href="pallette-du-gout.html" class="store__container__elt__info--name">
+                            <h4>La note enchantee</h4>
+                            <p>Charonne</p>
+                        </a>
+                        <div class="store__container__elt__info--icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="store__container__elt">
+                    <a href="pallette-du-gout.html" class="store__container__elt__img">
+                        <img class="store__container__elt__img--img" alt="Restaurant picture" src="./images/toa-heftib.jpg"/>
+                    </a>
+                    <div class="store__container__elt__info">
+                        <a href="pallette-du-gout.html" class="store__container__elt__info--name">
+                            <h4>A la francaise</h4>
+                            <p>Cite Rouge</p>
+                        </a>
+                        <div class="store__container__elt__info--icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="store__container__elt">
+                    <a href="pallette-du-gout.html" class="store__container__elt__img">
+                        <img class="store__container__elt__img--img" alt="Restaurant picture" src="./images/louis-hansel.jpg"/>
+                    </a>
+                    <div class="store__container__elt__info">
+                        <a href="pallette-du-gout.html" class="store__container__elt__info--name">
+                            <h4>Le delice des sens</h4>
+                            <p>Folie-Mericourt</p>
+                        </a>
+                        <div class="store__container__elt__info--icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <h5 class="footer--title">ohmyfood</h5>
+            <ul class="footer__nav">
+                <li class="footer__nav--link">
+                    <i class="fas fa-utensils"></i>
+                    Proposer un restaurant
+                </li>
+                <li class="footer__nav--link">
+                    <i class="fas fa-handshake"></i>
+                    Devenir partenaire
+                </li>
+                <li class="footer__nav--link">Mentions legales</li>
+                <li class="footer__nav--link">Contact</li>
+            </ul>
+        </footer>
+    </body>
 </html>
