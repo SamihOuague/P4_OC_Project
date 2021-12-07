@@ -109,6 +109,16 @@ body {
   text-align: center;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    margin-top: -16px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
 .menu {
   background: #F9F9F9;
   z-index: 999;
@@ -164,8 +174,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 0px 8px;
+  padding: 0px 16px;
   cursor: pointer;
+  overflow: hidden;
+  animation: fadeIn 5s;
 }
 .menu__container__elt__content__value--title, .menu__container__elt__content__value--info, .menu__container__elt__content__value--price {
   margin: 8px 0;
@@ -176,6 +188,38 @@ body {
 .menu__container__elt__content__value--info {
   font-size: 14px;
   font-weight: 300;
+}
+.menu__container__elt__content__value:hover .menu__container__elt__content__value--icon {
+  width: 56px;
+  background: #99E2D0;
+  position: relative;
+  left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  overflow: hidden;
+}
+.menu__container__elt__content__value:hover .menu__container__elt__content__value--icon .fas {
+  transform: rotate(360deg);
+}
+.menu__container__elt__content__value--icon {
+  width: 0px;
+  background: #99E2D0;
+  position: relative;
+  left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  overflow: hidden;
+  transition: width 400ms;
+}
+.menu__container__elt__content__value--icon .fas {
+  transform: rotate(180deg);
+  transition: transform 400ms;
 }
 .menu__container__elt__content__value div {
   min-height: 64px;

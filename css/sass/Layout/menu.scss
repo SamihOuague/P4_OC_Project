@@ -1,3 +1,14 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        margin-top: -16px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
 .menu {
     background: #F9F9F9;
     z-index: 999;
@@ -32,8 +43,10 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: stretch;
-                    padding: 0px 8px;
+                    padding: 0px 16px;
                     cursor: pointer;
+                    overflow: hidden;
+                    animation: fadeIn 5s;
                     &--title, &--info, &--price {
                         margin: 8px 0;
                     }
@@ -43,6 +56,20 @@
                     &--info {
                         font-size: 14px;
                         font-weight: 300;
+                    }
+                    &:hover &--icon {
+                        @include icons(56px);
+                        .fas {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    &--icon {
+                        @include icons(0px);
+                        transition: width 400ms;
+                        .fas {
+                            transform: rotate(180deg);
+                            transition: transform 400ms;
+                        }
                     }
                     div {
                         min-height: 64px;
