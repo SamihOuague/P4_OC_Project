@@ -19,6 +19,9 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        div, a {
+            flex: 1;
+        }
         a {
             text-decoration: none;
             color: black;
