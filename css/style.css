@@ -23,7 +23,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
 }
 .header__head a {
   text-decoration: none;
@@ -187,6 +186,10 @@ body {
 }
 .menu__container__elt__content__value--title, .menu__container__elt__content__value--info, .menu__container__elt__content__value--price {
   margin: 8px 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .menu__container__elt__content__value--price {
   font-weight: 600;

@@ -49,6 +49,10 @@
                     animation: fadeIn 5s;
                     &--title, &--info, &--price {
                         margin: 8px 0;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
                     }
                     &--price {
                         font-weight: 600;
