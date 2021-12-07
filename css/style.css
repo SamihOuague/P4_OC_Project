@@ -22,15 +22,21 @@ body {
 .header__head {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  text-align: center;
 }
 .header__head a {
   text-decoration: none;
+  color: black;
 }
 .header__head--title {
   font-family: Shrikhand;
   cursor: pointer;
   color: black;
+}
+.header__head--backlink {
+  margin-left: 24px;
+  font-size: 24px;
 }
 .header__info {
   background: #F0F0F0;
