@@ -1,6 +1,9 @@
+@import "../Utils/show-element.scss";
+
 .store {
     background: #F9F9F9;
     padding: 16px;
+    overflow: hidden;
     &--title {
         font-size: 24px;
     }

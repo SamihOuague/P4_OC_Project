@@ -18,18 +18,19 @@ body {
     &__head {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        div, a {
-            flex: 1;
-        }
         a {
             text-decoration: none;
             color: black;
+        }
+        a:nth-child(2) {
+            flex: 1;
         }
         &--title {
             font-family: Shrikhand;
             cursor: pointer;
             color: black;
+            width: 100%;
+            text-align: center;
         }
         &--backlink {
             margin-left: 24px;

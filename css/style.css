@@ -1,3 +1,35 @@
+@keyframes color-back {
+  0% {
+    background: linear-gradient(#FF79DA, #9356DC);
+  }
+  33% {
+    background: linear-gradient(#ff79ea, #8356dc);
+  }
+  66% {
+    background: linear-gradient(#ff79f9, #7456dc);
+  }
+  100% {
+    background: linear-gradient(#f579ff, #6456dc);
+  }
+}
+@keyframes showElement {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+  90% {
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+    height: auto;
+  }
+}
+.hide-a-moment {
+  animation: showElement 3s forwards;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -22,19 +54,20 @@ body {
 .header__head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-.header__head div, .header__head a {
-  flex: 1;
 }
 .header__head a {
   text-decoration: none;
   color: black;
 }
+.header__head a:nth-child(2) {
+  flex: 1;
+}
 .header__head--title {
   font-family: Shrikhand;
   cursor: pointer;
   color: black;
+  width: 100%;
+  text-align: center;
 }
 .header__head--backlink {
   margin-left: 24px;
@@ -90,6 +123,12 @@ body {
   margin: 32px 0;
   cursor: pointer;
   box-shadow: 3px 3px 5px #b4b4b4;
+  transition-property: box-shadow;
+  transition-duration: 500ms;
+}
+.header__intro--button:hover {
+  box-shadow: 3px 3px 10px #b4b4b4;
+  animation: color-back 500ms forwards;
 }
 
 .footer {
@@ -148,10 +187,10 @@ body {
   font-size: 20px;
   cursor: pointer;
   color: #F2F2F2;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
 }
 .menu__heading--icon i {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   transition-property: background, background-clip, -webkit-text-fill-color;
   transition-duration: 400ms;
 }
@@ -159,6 +198,9 @@ body {
   -webkit-text-stroke-width: 0px;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 .menu__container--button {
@@ -172,7 +214,13 @@ body {
   margin: 32px 0;
   cursor: pointer;
   box-shadow: 3px 3px 5px #b4b4b4;
+  transition-property: box-shadow;
+  transition-duration: 500ms;
   font-size: 16px;
+}
+.menu__container--button:hover {
+  box-shadow: 3px 3px 10px #b4b4b4;
+  animation: color-back 500ms forwards;
 }
 .menu__container__elt__content__value {
   margin: 16px 0;
@@ -289,9 +337,28 @@ body {
   color: #9356DC;
 }
 
+@keyframes showElement {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+  90% {
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+    height: auto;
+  }
+}
+.hide-a-moment {
+  animation: showElement 3s forwards;
+}
+
 .store {
   background: #F9F9F9;
   padding: 16px;
+  overflow: hidden;
 }
 .store--title {
   font-size: 24px;
@@ -335,10 +402,10 @@ body {
   font-size: 20px;
   cursor: pointer;
   color: #FFFFFF;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
 }
 .store__container__elt__info--icon i {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   transition-property: background, background-clip, -webkit-text-fill-color;
   transition-duration: 400ms;
 }
@@ -346,6 +413,9 @@ body {
   -webkit-text-stroke-width: 0px;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 .store__container__elt__img {
@@ -356,6 +426,45 @@ body {
 }
 .store__container__elt__img--img {
   width: 100%;
+}
+
+@keyframes animeSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hideSpinner {
+  0% {
+    opacity: 1;
+    height: 420px;
+  }
+  90% {
+    opacity: 1;
+    height: 420px;
+  }
+  100% {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+  }
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hideSpinner 3s forwards;
+  height: 420px;
+}
+.spinner .fa-spinner {
+  margin: 15px 0;
+  font-size: 82px;
+  animation-duration: 4s;
+  animation-name: animeSpinner;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 /*# sourceMappingURL=style.css.map */

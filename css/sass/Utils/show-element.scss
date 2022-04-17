@@ -1,0 +1,16 @@
+@keyframes showElement {
+    0% {
+        height: 0;
+        overflow: hidden;
+    } 90% {
+        height: 0;
+        overflow: hidden;
+    } 100% {
+        overflow: visible;
+        height: auto;
+    }
+}
+
+.hide-a-moment {
+    animation: showElement 3s forwards;
+}

@@ -1,3 +1,14 @@
+@keyframes color-back {
+    0% {
+        background: linear-gradient(#FF79DA, #9356DC);
+    } 33% {
+        background: linear-gradient(adjust-hue($color: #FF79DA, $degrees: -7), adjust-hue($color: #9356DC, $degrees: -7));
+    } 66% {
+        background: linear-gradient(adjust-hue($color: #FF79DA, $degrees: -14), adjust-hue($color: #9356DC, $degrees: -14));
+    } 100% {
+        background: linear-gradient(adjust-hue($color: #FF79DA, $degrees: -21), adjust-hue($color: #9356DC, $degrees: -21));
+    }
+}
 @mixin custom-button {
     border: none;
     padding: 16px 24px;
@@ -9,4 +20,10 @@
     margin: 32px 0;
     cursor: pointer;
     box-shadow: 3px 3px 5px #b4b4b4;
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+    &:hover {
+        box-shadow: 3px 3px 10px #b4b4b4;
+        animation: color-back 500ms forwards;
+    }
 }

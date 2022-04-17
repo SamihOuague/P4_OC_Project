@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">  
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>OhMyFood!</title>
     </head>
     <body>
@@ -25,13 +25,16 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </span>Paris, Belleville</p>
             </div>
-            <div class="header__intro p-32">
-                <h2 class="header__intro--title">Reserver le menu qui<br/> vous convient</h2>
-                <p class="header__intro--subtitle">Decouvrez des restaurant d'exception,<br/>selectionner par nos soins.</p>
-                <button class="header__intro--button">Explorer nos restaurants</button>
+            <div class="hide-a-moment">
+                <div class="header__intro p-32">
+                    <h2 class="header__intro--title">Reserver le menu qui<br/> vous convient</h2>
+                    <p class="header__intro--subtitle">Decouvrez des restaurant d'exception,<br/>selectionner par nos soins.</p>
+                    <button class="header__intro--button">Explorer nos restaurants</button>
+                </div>
             </div>
         </header>
-        <section class="work">
+
+        <section class="work hide-a-moment">
             <h3 class="work--title">Fonctionnement</h3>
             <div class="work__container">
                 <div class="work__container__elt">
@@ -54,7 +57,10 @@
                 </div>
             </div>
         </section>
-        <section class="store">
+        <div class="spinner">
+            <i class="fa-solid fa-spinner"></i>
+        </div>
+        <section class="store hide-a-moment">
             <h3 class="store--title">Restaurants</h3>
             <div class="store__container">
                 <div class="store__container__elt">
@@ -115,6 +121,7 @@
                 </div>
             </div>
         </section>
+
         <footer class="footer">
             <h5 class="footer--title">ohmyfood</h5>
             <ul class="footer__nav">
